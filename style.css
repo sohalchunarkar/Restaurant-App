@@ -283,3 +283,81 @@ body {
         transform: rotate(360deg);
     }
 }
+
+
+
+/* ========================================== */
+/* RESPONSIVE DESIGN (Tablets & Mobile)         */
+/* ========================================== */
+
+@media (max-width: 850px) {
+    /* Stack the sidebar on top of the main content */
+    .app-container {
+        flex-direction: column;
+    }
+
+    /* Make sidebar take full width */
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 15px;
+    }
+
+    /* Turn sidebar links into a horizontal row on mobile */
+    .nav-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-section ul li a {
+        padding: 5px 10px;
+        background-color: var(--bg-card);
+        border-radius: 4px;
+    }
+
+    /* Reduce padding on the main content */
+    .main-content {
+        padding: 15px;
+    }
+
+    /* Stack the search bar and login buttons */
+    .top-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    /* Make search bar take full width */
+    .search-container {
+        width: 100%;
+    }
+
+    /* Center the login/signup buttons */
+    .auth-container {
+        justify-content: space-between;
+    }
+
+    /* Make the cart stretch across the bottom of the screen */
+    .cart-bar {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        justify-content: space-between;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Make buttons a bit smaller for really small phone screens */
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .brand-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
